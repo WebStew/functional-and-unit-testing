@@ -1,0 +1,20 @@
+{
+	"name" 				: "test-suite" 	,
+	"version" 			: "0.1.0" 		,
+	"private" 			: true 			,
+	"devDependencies" 	: {
+		"blanket"					: "^1.1.6"	,
+		"chai" 						: "^3.5.0"	,
+		"chai-as-promised" 			: "^5.2.0"	,
+		"cucumber"					: "^0.5.3"	,
+		"extend"					: "^3.0.0"	,
+		"grunt"						: "^0.4.1"	,
+		"grunt-blanket-mocha"		: "^0.5"	,
+		"grunt-cli"					: "*" 		,
+		"grunt-env"					: "^0.4.4" 	,
+		"grunt-selenium-standalone" : "^0.1.2" 	,
+		"grunt-webdriver"			: "^1.0.0" 	,
+		"wdio-spec-reporter"		: "git+https://github.com/webdriverio/wdio-spec-reporter.git" ,
+		"webdriverio"				: "^3.2.4"
+	}
+}

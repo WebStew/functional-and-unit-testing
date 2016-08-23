@@ -1,0 +1,13 @@
+
+.transition {
+    -webkit-transition  : opacity 0.25s;
+    transition          : opacity 0.25s;
+}
+
+.transparent {
+    opacity : 0;
+}
+
+.hidden {
+    display : none;
+}

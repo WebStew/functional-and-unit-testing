@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Application Unit Tests</title>
+
+    <!-- Mocha styles -->
+    <link rel="stylesheet" href="vendor/mocha.css">
+    <link rel="stylesheet" href="css/tests.css">
+</head>
+<body>
+
+    <!-- Required Mocha tag -->
+    <div id="mocha"></div>
+    <div id="messages"></div>
+    <div id="fixtures"></div>
+
+    <!-- function bind polyfill for pahntomjs -->
+    <script src="polyfills/bind.js"></script>
+
+    <!-- Testing libraries -->
+    <script src="vendor/mocha.js"></script>
+
+    <!--script src="../../bower_components/fixtures/fixtures.js"></script-->
+
+    <script src="../../bower_components/requirejs/require.js" data-main="runner"></script>
+
+    <script src="vendor/blanket.min.js" data-cover-only="../../components" data-cover-never="tests"></script>
+    <script src="../../node_modules/grunt-blanket-mocha/support/mocha-blanket.js"></script>
+
+    <!-- live reload -->
+    <!-- <script src="//localhost:35729/livereload.js"></script> -->
+
+    <script>
+
+        // To allow Blanket to communicate with the parent Grunt process.
+        if ( window.PHANTOMJS ) {
+            blanket.options ( 'reporter' , '../../node_modules/grunt-blanket-mocha/support/grunt-reporter.js' );
+        }
+    </script>
+
+    <style>
+        #blanket-main {
+            margin      : 0 20px 0 65px;
+            font-size   : 14px;
+        }
+    </style>
+</body>
+</html>
